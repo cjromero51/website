@@ -1,32 +1,98 @@
-.App {
+body {
+  max-width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+  background-color: rgba(125,151,173, 0.1);
+}
+
+/*
+HEADER CONTENT
+ */
+
+.header_title, .title_description {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+ }
+
+.udacity_logo {
+  max-width: 100px;
+  position: absolute;
+}
+
+.header_title {
+  font-size: 4em;
+  color: rgba(45, 60, 73, 1);
+  text-align: right;
+}
+
+.header_line {
+  height: 3px;
+  background-color: rgba(125, 151, 173, 1);
+}
+
+/*
+SECTION CONTENT
+ */
+
+.front_end_image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px rgba(125, 151, 173, 1);
+  opacity: 0.8;
+}
+
+.my_projects {
+  color: rgba(114, 139, 160, 1);
+  font-size: 2em;
+  font-weight: 100;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#projects {
+  font-size: 0.65em;
+  vertical-align: top;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.project_titles {
+  text-align: center;
+  font-size: 1.75em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.project_image {
+  max-width: 220px;
+  padding: 0;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(125, 151, 173, 1);
+  opacity: 0.7;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  transition: transform 0.3s;
+}
+
+.project_image:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.project_item {
+  color: rgba(45, 60, 73, 1);
+  text-decoration: none;
+}
+
+.project_item:hover {
+  transition:color 0.5s ease;
+  color: rgba(125, 151, 173, 1);
 }
