@@ -8,7 +8,7 @@ class App extends Component {
     projectObjects: [
       {
         name: "Memory Game",
-        url: "#",
+        url: "https://cjromero51.github.io",
         image:"./images/memory_no_srcset.jpg",
         image1x:"./images/memory-1x.jpg",
         image2x:"./images/memory-2x.jpg"
