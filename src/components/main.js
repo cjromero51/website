@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ProjectList from "./projectList";
 class Main extends Component {
   render(){
-    const projectsContainer = document.getElementById('projects');
     return (
       <div>
         <main className="content">
