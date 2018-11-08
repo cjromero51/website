@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './responsive.css'
 import Section from './components/section';
 import Main from './components/main'
 
