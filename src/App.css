@@ -1,7 +1,7 @@
 body {
   max-width: 100%;
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: 16px;
   max-width: 1000px;
   margin: auto;
@@ -12,7 +12,9 @@ body {
 /*
 HEADER CONTENT
  */
-
+.header_interior {
+  font-size:30px;
+}
 .header_title, .title_description {
   text-align: right;
   margin: 0;
