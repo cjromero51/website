@@ -34,12 +34,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Section
-          {...this.state}
-          />
-        <Main
-          {...this.state}
-          />
+        <div className="background">
+          <Section
+            {...this.state}
+            />
+          <Main
+            {...this.state}
+            />
+        </div>
       </div>
     );
   }
