@@ -3,6 +3,7 @@ import './App.css';
 import './responsive.css'
 import Section from './components/section';
 import Main from './components/main'
+import Sidebar from './components/hamburger'
 
 class App extends Component {
   state = {
@@ -34,11 +35,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="background">
-          <Section
-            {...this.state}
-            />
-          <Main
+        <div classname="frontpage">
+          <Sidebar
             {...this.state}
             />
         </div>
