@@ -35,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div classname="frontpage">
+        <div className="homepage-container">
           <Sidebar
             {...this.state}
             />

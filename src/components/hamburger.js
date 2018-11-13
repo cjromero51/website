@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import Nav from './nav';
 
 class Sidebar extends Component {
   toggleOpen = (e) => {
     let burger = document.getElementById('hamburger');
     burger.classList.toggle('open')
+    // let nav = document.getElementById('nav');
+    // if (nav.style.display === 'none') {
+    //   nav.style.display = 'block';
+    // } else {
+    //   nav.style.display = 'none';
+    // }
   }
   render(){
     return (
@@ -13,7 +20,9 @@ class Sidebar extends Component {
           <div className="hb-2"></div>
           <div className="hb-3"></div>
         </div>
-        <div className="sidebar-bottom"></div>
+        <div id="nav" style={{display:'none'}} className="sidebar-open">
+          <Nav />
+        </div>
       </div>
     )
   }
