@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  overflow:hidden;
+  overflow-x:hidden;
   margin: auto;
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
@@ -85,7 +85,7 @@ HEADER CONTENT
      transform: translate3d(2px, 0, 0);
    }
  }
-.sidebar {
+.nav-bar {
   padding-top:1em;
   width:100vw;
   height:8vh;
@@ -172,8 +172,8 @@ HEADER CONTENT
 SECTION CONTENT
  */
 .greetings {
-  padding-left:1em;
-  padding-right:1em;
+  padding-left:0.5em;
+  padding-right:0.5em;
   text-align: center;
 }
 .front_end_image {
