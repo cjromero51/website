@@ -6,16 +6,16 @@ class Homepage extends Component {
   loadImage = () => {
     setTimeout(()=> {
       document.getElementById("picture").style.display = "flex";
-    },6000)
+    },12000)
   }
   wait = () => {
     setTimeout(() => {
       document.getElementById('wait').style.display = "block";
       document.getElementById('wait').style.textAlign = "center";
-    }, 2500)
+    }, 9000)
     setTimeout(() => {
       document.getElementById('wait').style.display = "none";
-    },6000)
+    },12000)
   }
   render(){
     return (
@@ -31,14 +31,27 @@ class Homepage extends Component {
         <table className="frontpage-table">
           <tr>
             <div className="header_interior">
-                <h1 className="greetings">Greetings.</h1>
-              <p className="greetings">I'm CJ Romero, Front-End Web Developer. <p>Let's start off by putting a face with a name.
+                <h1 className="greetings">
+                  <Typed
+                  strings={['Greetings.']}
+                  typeSpeed={40}
+                  showCursor={false}
+                  />
+              </h1>
+              <p className="greetings">
+                <Typed
+                strings={["I'm CJ Romero, Front-End Web Developer.", "Let's start off by putting a face with a name."]}
+                startDelay={1500}
+                typeSpeed={40}
+                backSpeed={10}
+                showCursor={false}
+                />
               <p style={{display:'none'}} onLoad={this.wait()} id="wait"><Typed
               strings={["Wait for it..."]}
-              startDelay={2500}
+              startDelay={9000}
               typeSpeed={40}
               backSpeed={50}/>
-              </p>
+
               </p>
               </p>
               </div>

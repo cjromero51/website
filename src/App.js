@@ -4,6 +4,11 @@ import './responsive.css'
 import Section from './components/section';
 import Main from './components/main'
 import Homepage from './components/homepage'
+import {
+    BrowserRouter,
+    Route,
+    Link
+} from "react-browser-router";
 
 class App extends Component {
   state = {
@@ -42,12 +47,15 @@ class App extends Component {
     return (
       <div className="App">
         <div className="homepage-container">
-          <Homepage
-            {...this.state}
-            toggleOpen={this.toggleOpen}
-            />
+          <Route exact path="/" render={() => (
+            <Homepage
+              {...this.state}
+              toggleOpen={this.toggleOpen}
+              />
+          )}
+          />
+          </div>
         </div>
-      </div>
     );
   }
 }

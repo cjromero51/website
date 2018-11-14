@@ -88,7 +88,7 @@ HEADER CONTENT
 .nav-bar {
   padding-top:1em;
   width:100vw;
-  height:8vh;
+  height:10vh;
   background-image: linear-gradient(89deg, #406e84, #587d8e);
 }
 #hamburger {
@@ -137,7 +137,7 @@ HEADER CONTENT
   box-shadow: 5px 5px 7px 1px rgba(0,0,0,0.25);
 }
 .header_interior {
-  font-size:30px;
+  font-size:2em;
   width:60vw;
   margin:0 auto;
   margin-top:2em;
