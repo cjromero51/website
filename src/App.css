@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  overflow-x:hidden;
+  overflow:hidden;
   margin: auto;
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Nav from './nav';
 import Sidebar from './sidebar'
+import Typed from 'react-typed';
 class Homepage extends Component {
   loadImage = () => {
     setTimeout(()=> {
       document.getElementById("picture").style.display = "flex";
-    },5000)
+    },6000)
   }
   wait = () => {
     setTimeout(() => {
@@ -14,7 +15,7 @@ class Homepage extends Component {
     }, 2500)
     setTimeout(() => {
       document.getElementById('wait').style.display = "none";
-    },5000)
+    },6000)
   }
   render(){
     return (
@@ -31,7 +32,15 @@ class Homepage extends Component {
           <tr>
             <div className="header_interior">
                 <h1 className="greetings">Greetings.</h1>
-              <p className="greetings">I'm CJ Romero, Front-End Web Developer. <p>Let's start off by putting a face with a name. <p style={{display:'none'}} onLoad={this.wait()} id="wait">Wait for it...</p></p></p>
+              <p className="greetings">I'm CJ Romero, Front-End Web Developer. <p>Let's start off by putting a face with a name.
+              <p style={{display:'none'}} onLoad={this.wait()} id="wait"><Typed
+              strings={["Wait for it..."]}
+              startDelay={2500}
+              typeSpeed={40}
+              backSpeed={50}/>
+              </p>
+              </p>
+              </p>
               </div>
           </tr>
           <tr>
