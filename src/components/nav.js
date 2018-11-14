@@ -2,15 +2,12 @@ import React, {Component} from 'react';
 class Nav extends Component {
   render(){
     return (
-      <header className="header">
-        <nav className="nav">
-          <a className="nav-link" href="#">Home</a>
-          <a className="nav-link" href="#">About</a>
-          <a className="nav-link" href="#">Web</a>
-          <a className="nav-link" href="#">Contact</a>
-        </nav>
-        <hr className="header_line"/>
-      </header>
+      <nav className="nav">
+        <li><a className="nav-link" href="#">Home</a></li>
+        <li><a className="nav-link" href="#">About</a></li>
+        <li><a className="nav-link" href="#">Web</a></li>
+        <li><a className="nav-link" href="#">Contact</a></li>
+      </nav>
     )
   }
 }

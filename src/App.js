@@ -3,7 +3,7 @@ import './App.css';
 import './responsive.css'
 import Section from './components/section';
 import Main from './components/main'
-import Sidebar from './components/hamburger'
+import Homepage from './components/homepage'
 
 class App extends Component {
   state = {
@@ -31,13 +31,20 @@ class App extends Component {
       }
     ]
   }
-
+  toggleOpen = (e) => {
+    let burger = document.getElementById('hamburger');
+    burger.classList.toggle('open')
+    let nav = document.getElementById('nav');
+    nav.style.display === 'none'
+    ? nav.style.display = 'block' : nav.style.display = 'none';
+  }
   render() {
     return (
       <div className="App">
         <div className="homepage-container">
-          <Sidebar
+          <Homepage
             {...this.state}
+            toggleOpen={this.toggleOpen}
             />
         </div>
       </div>
