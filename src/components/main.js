@@ -17,7 +17,6 @@ class Main extends Component {
           <p className="self-summary"></p>
         </main>
         <footer>
-          <hr className="header_line"/>
         </footer>
       </div>
     )
