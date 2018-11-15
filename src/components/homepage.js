@@ -4,7 +4,11 @@ import Typed from 'react-typed';
 class Homepage extends Component {
   loadImage = () => {
     setTimeout(()=> {
-      document.getElementById("picture").style.display = "";
+      setTimeout(() => {
+        for (var i = 100; i >= 0; i--) {
+          document.getElementById("picture").style.top = i + 'vh';
+        }
+      }, 100)
     },12000)
   }
   wait = () => {
@@ -12,9 +16,6 @@ class Homepage extends Component {
       document.getElementById('wait').style.display = "";
       document.getElementById('wait').style.textAlign = "center";
     }, 9000)
-    // setTimeout(() => {
-    //   document.getElementById('wait').style.display = "none";
-    // },12000)
   }
   render(){
     return (
@@ -49,7 +50,9 @@ class Homepage extends Component {
                 backSpeed={10}
               />
             </p>
-            <img id="picture" src={'/images/me.jpg'} alt="CJ & Josiah"style={{display:'none'}} onLoad={this.loadImage()}/>
+            <div className="image-container">
+              <img id="picture" src={'/images/me.jpg'} alt="CJ & Josiah" onLoad={this.loadImage()}/>
+            </div>
           </div>
         </div>
       </main>
