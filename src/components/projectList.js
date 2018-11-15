@@ -11,26 +11,25 @@ class ProjectList extends Component {
           />
         <div id="homepage">
           <div className="hamburger" onClick={this.props.openMenu}>&#9776;</div>
-          <div className="main-content">
-            <React.Fragment>
-              {this.props && (
-                this.props.projectObjects.map((project, id) => (
-                  <div key={id} className='project_container'>
-                    <a className='image_container' href={project.url}>
-                      <img className='project_image'
-                        src={project.image}
-                        srcSet={`${project.image1x} 1x, ${project.image2x} 2x`}
-                        alt={project.name}/>
+          <h2>Projects</h2>
+            <div className="project-list">
+                {this.props && (
+                  this.props.projectObjects.map((project, id) => (
+                    <div key={id} className='project_container'>
+                        <img className='project_image'
+                          src={project.image}
+                          srcSet={`${project.image1x} 1x, ${project.image2x} 2x`}
+                          alt={project.name}/>
+                        <a href={project.url}>
+                      <div className="overlay">
+                        <h3 className='project_titles'>{project.name}</h3>
+                      </div>
                     </a>
-                    <a className='project_item' href={project.url}>
-                      <h3 className='project_titles'>{project.name}</h3>
-                    </a>
-                  </div>
-                ))
-              )
-            }
-          </React.Fragment>
-        </div>
+                    </div>
+                  ))
+                )
+              }
+            </div>
       </div>
     </div>
   )

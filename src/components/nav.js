@@ -8,7 +8,7 @@ class Nav extends Component {
         <div className="nav-wrapper">
           <li><Link to='/' onClick={this.forceUpdate}>Home</Link></li>
           <li><Link to='/about' onClick={this.forceUpdate}>About</Link></li>
-          <li><Link to='/projects' onClick={this.forceUpdate}>Web</Link></li>
+          <li><Link to='/projects' onClick={this.forceUpdate}>Projects</Link></li>
           <li><Link to='/contact' onClick={this.forceUpdate}>Contact</Link></li>
         </div>
       </div>
