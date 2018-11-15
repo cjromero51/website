@@ -12,9 +12,9 @@ class Homepage extends Component {
       document.getElementById('wait').style.display = "";
       document.getElementById('wait').style.textAlign = "center";
     }, 9000)
-    setTimeout(() => {
-      document.getElementById('wait').style.display = "none";
-    },12000)
+    // setTimeout(() => {
+    //   document.getElementById('wait').style.display = "none";
+    // },12000)
   }
   render(){
     return (
@@ -43,13 +43,13 @@ class Homepage extends Component {
             </p>
             <p id="wait" style={{display:'none'}} onLoad={this.wait()}>
               <Typed
-                strings={["Wait for it..."]}
+                strings={["Wait for it...", "CJ Romero"]}
                 startDelay={9000}
                 typeSpeed={40}
-                backSpeed={50}
+                backSpeed={10}
               />
             </p>
-            <img id="picture" style={{display:'none'}} src={'/images/me.jpg'} alt="CJ & Josiah" onLoad={this.loadImage()}/>
+            <img id="picture" src={'/images/me.jpg'} alt="CJ & Josiah"style={{display:'none'}} onLoad={this.loadImage()}/>
           </div>
         </div>
       </main>
