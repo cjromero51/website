@@ -2,12 +2,15 @@ import React, {Component} from 'react';
 class Nav extends Component {
   render(){
     return (
-      <nav className="nav">
-        <li><a className="nav-link" href="#">Home</a></li>
-        <li><a className="nav-link" href="#">About</a></li>
-        <li><a className="nav-link" href="#">Web</a></li>
-        <li><a className="nav-link" href="#">Contact</a></li>
-      </nav>
+      <div id="menu" className="menu-canvas">
+        <a href="javascript:void(0)" className="x" onClick={this.props.closeMenu}>&times;</a>
+        <div className="nav-wrapper">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Web</a></li>
+          <li><a href="#">Contact</a></li>
+        </div>
+      </div>
     )
   }
 }

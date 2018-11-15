@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import './responsive.css'
-import Section from './components/section';
-import Main from './components/main'
 import Homepage from './components/homepage'
 import {
     BrowserRouter,
@@ -36,25 +34,25 @@ class App extends Component {
       }
     ]
   }
-  toggleOpen = (e) => {
-    let burger = document.getElementById('hamburger');
-    burger.classList.toggle('open')
-    let nav = document.getElementById('nav');
-    nav.style.display === 'none'
-    ? nav.style.display = 'block' : nav.style.display = 'none';
+  closeMenu = () => {
+    document.getElementById('menu').style.width = "0";
+    document.getElementById('homepage').style.marginLeft = "0"
+  }
+  openMenu = () => {
+    document.getElementById('menu').style.width = "100vw";
+    document.getElementById('homepage').style.marginLeft = "100vw"
   }
   render() {
     return (
       <div className="App">
-        <div className="homepage-container">
           <Route exact path="/" render={() => (
             <Homepage
               {...this.state}
-              toggleOpen={this.toggleOpen}
+              closeMenu={this.closeMenu}
+              openMenu={this.openMenu}
               />
           )}
           />
-          </div>
         </div>
     );
   }
