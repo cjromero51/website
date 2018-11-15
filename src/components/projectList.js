@@ -3,14 +3,14 @@ import Nav from './nav'
 class ProjectList extends Component {
   render(){
     return (
-      <main>
+      <div className="projects">
         <Nav
           {...this.props}
           closeMenu={this.props.closeMenu}
           openMenu={this.props.openMenu}
-        />
+          />
         <div id="homepage">
-        <div className="hamburger" onClick={this.props.openMenu}>&#9776;</div>
+          <div className="hamburger" onClick={this.props.openMenu}>&#9776;</div>
           <div className="main-content">
             <React.Fragment>
               {this.props && (
@@ -21,19 +21,18 @@ class ProjectList extends Component {
                         src={project.image}
                         srcSet={`${project.image1x} 1x, ${project.image2x} 2x`}
                         alt={project.name}/>
-                      </a>
-                      <a className='project_item' href={project.url}>
-                        <h3 className='project_titles'>{project.name}</h3>
-                      </a>
+                    </a>
+                    <a className='project_item' href={project.url}>
+                      <h3 className='project_titles'>{project.name}</h3>
+                    </a>
                   </div>
                 ))
               )
             }
-            </React.Fragment>
+          </React.Fragment>
         </div>
-        </div>
-      </main>
-
+      </div>
+    </div>
   )
 }
 }

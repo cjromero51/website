@@ -2,7 +2,6 @@ body {
   margin: 0 auto;
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
-  overflow: hidden;
   height:100vh;
   width:100vw;
 }
@@ -13,6 +12,7 @@ body {
 /* homepage */
 
 main {
+  overflow: hidden;
   background-color: #7fd3f92b;
   height:100vh;
   width:100vw;
@@ -58,7 +58,7 @@ main {
   border-radius: 10em;
 }
 .menu-canvas .x {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0.5em;
   padding:0;
@@ -81,7 +81,7 @@ main {
 /* homepage screen content */
 .hamburger {
   text-align: center;
-  position:static;
+  position:fixed;
   cursor: pointer;
   font-size: 50px;
   color: #5b5b5b;
@@ -122,4 +122,10 @@ h1 {
   font-size:50px;
   text-align: center;
   letter-spacing: 2px;
+}
+/* Projects page */
+
+.projects {
+  background-color: #7fd3f92b;
+  overflow-y:scroll;
 }

@@ -13,7 +13,7 @@ class Contact extends Component {
         <div id="homepage">
         <div className="hamburger" onClick={this.props.openMenu}>&#9776;</div>
           <div className="main-content">
-        <p>hello world</p>
+        <p>hello <strong>contact</strong> world</p>
         </div>
         </div>
       </main>
