@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import './responsive.css'
+import ProjectList from './components/projectList'
 import Homepage from './components/homepage'
+import About from './components/about'
+import Contact from './components/contact'
 import {
     BrowserRouter,
     Route,
@@ -53,6 +56,29 @@ class App extends Component {
               />
           )}
           />
+        <Route path="/about" render={() => (
+            <About
+              closeMenu={this.closeMenu}
+              openMenu={this.openMenu}
+              />
+          )}
+          />
+        <Route path="/projects" render={() => (
+            <ProjectList
+              {...this.state}
+              closeMenu={this.closeMenu}
+              openMenu={this.openMenu}
+              />
+          )}
+          />
+        <Route path="/contact" render={() => (
+              <Contact
+                {...this.state}
+                closeMenu={this.closeMenu}
+                openMenu={this.openMenu}
+                />
+            )}
+            />
         </div>
     );
   }

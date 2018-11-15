@@ -4,17 +4,19 @@ import Typed from 'react-typed';
 class Homepage extends Component {
   loadImage = () => {
     setTimeout(()=> {
-      setTimeout(() => {
+      if (document.getElementById("picture")) {
         for (var i = 100; i >= 0; i--) {
           document.getElementById("picture").style.top = i + 'vh';
         }
-      }, 100)
+      }
     },12000)
   }
   wait = () => {
     setTimeout(() => {
-      document.getElementById('wait').style.display = "";
-      document.getElementById('wait').style.textAlign = "center";
+      if (document.getElementById('wait')) {
+        document.getElementById('wait').style.display = "";
+        document.getElementById('wait').style.textAlign = "center";
+      }
     }, 9000)
   }
   render(){
@@ -22,6 +24,7 @@ class Homepage extends Component {
       <main>
         <Nav
           {...this.props}
+          closeMenu={this.props.closeMenu}
         />
         <div id="homepage">
         <div className="hamburger" onClick={this.props.openMenu}>&#9776;</div>
