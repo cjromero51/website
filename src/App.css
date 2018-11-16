@@ -146,8 +146,9 @@ h1 {
   height:300px;
 }
 .project_titles {
-  color: black;
-  font-size: 20px;
+  color: white;
+  font-weight:bold;
+  font-size: 25px;
   position: absolute;
   top: 40%;
   left: 50%;
